@@ -114,9 +114,9 @@ cubed_number = cubed(2)
 
 這樣就可以把 `cubed_number` 指定為 8。
 
-### Return 可以省略
+### Return 可以不用寫？
 
-比較值得注意的是，在 ruby 中 `return` 是可以被省略的，如果在一個 method 中沒有寫 `return` 的話，ruby 會自動回傳最後一個執行的程式的回傳值。例如剛剛的 method 最後運算的東西是 `x * x * x` 所以就算不寫 `return`，三次方的結果也會被自動回傳。所以這樣很多人會直接寫成：
+比較值得注意的是，在 ruby 中所有 method 都一定有回傳值，所以如果你沒有寫 `return` 那 ruby 就會回傳它最後執行的程式的回傳值。例如剛剛的 method 最後運算的東西是 `x * x * x` 所以就算不寫 `return`，三次方的結果也會被自動回傳。所以這樣很多人會直接寫成：
 
 ```ruby
 def cubed(x)
