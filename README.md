@@ -114,6 +114,20 @@ cubed_number = cubed(2)
 
 這樣就可以把 `cubed_number` 指定為 8。
 
+### Return 是 method 的結尾
+
+當你使用 return 之後，method 就會跳出，並且回傳你的回傳值。所以無論下面還有千千萬萬行程式，都不會被執行。例如：
+
+```ruby
+def cubed(x)
+  return x * x * x
+  
+  puts '這行不會被執行！'
+end
+```
+
+上面這個例子，在使用 return 之後這個 method 就結束了。所以下面這行 `puts '這行不會被執行！'` 就不會被印在 terminal 裡面囉。
+
 ### Return 可以不用寫？
 
 比較值得注意的是，在 ruby 中所有 method 都一定有回傳值，所以如果你沒有寫 `return` 那 ruby 就會回傳它最後執行的程式的回傳值。例如剛剛的 method 最後運算的東西是 `x * x * x` 所以就算不寫 `return`，三次方的結果也會被自動回傳。所以這樣很多人會直接寫成：
